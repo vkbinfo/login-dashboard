@@ -1,3 +1,25 @@
-<p>
-  login works!
-</p>
+
+<div class="container-fluid loginDiv">
+  <div *ngIf="loggedIn">
+    <h1>You are logged In.</h1>
+  </div>
+  <div *ngIf="!loggedIn">
+  <h1 > Welcome</h1>
+    <form>
+      <div id="email">
+        <div class="label" id="emailword">EMAIL</div>
+        <input type="email" name="email" placeholder="E.g kiran.padwal@connecsi.com" id="emailinput" [(ngModel)]="email"
+          [class.errorBorderClass]='email_error'>
+        <h5 *ngIf="email_error" class="autherror">{{ error_message }}</h5>
+      </div>
+      <div id="password">
+        <div class="label" id="passtext">PASSWORD</div>
+        <input type="password" name="password" placeholder="Enter your password." id="passwordinput" [(ngModel)]="password"
+          [class.errorBorderClass]='password_error'>
+        <h5 *ngIf="password_error" class="autherror">{{ error_message }}</h5>
+      </div>
+      <h5 *ngIf="show_error" class="autherror">{{ error_message }}</h5>
+      <button id="loginbt" class="btn btn-primary loginbtn" (click)="loginUser(email, password)">Login</button>
+    </form>
+  </div>
+</div>
