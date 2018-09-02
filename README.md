@@ -1,5 +1,5 @@
 # Instruction to use the app:
-1.first install the node modules from package.json with npm. and then use ng serve command to run the app locally(the informatin is given below).
+1.first install the node modules from package.json with npm. and then use ng serve command to run the app locally(the informatin is given below).<br/>
 2.The login functionality is routed at "localhost:4200/login".
 
 # LoginApp
